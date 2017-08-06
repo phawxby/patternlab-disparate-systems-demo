@@ -1,0 +1,27 @@
+machine:
+  node:
+    version: 6
+
+dependencies:
+  override:
+    - npm install -g gulp
+    - npm install
+
+database:
+  override:
+    - echo "Skip."
+
+compile:
+  override:
+    - gulp patternlab:build
+
+test:
+  override:
+    - echo "Skip."
+
+deployment:
+  release:
+    branch: master
+      commands:
+        # - gulp deploy:sftp
+        # Disable to stop the build failing
