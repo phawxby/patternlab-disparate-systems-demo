@@ -23,5 +23,4 @@ deployment:
   release:
     branch: master
       commands:
-        # - gulp deploy:sftp
-        # Disable to stop the build failing
+        - gulp deploy:sftp
