@@ -26,6 +26,7 @@
   "author": "Brian Muenzenmeyer",
   "scripts": {
     "start": "gulp patternlab:serve",
+    "build": "gulp patternlab:build",
     "postinstall": "node scripts/postinstall.js",
     "gulp": "gulp -- ",
     "deploy": "gulp deploy"
