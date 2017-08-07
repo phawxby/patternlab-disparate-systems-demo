@@ -11,7 +11,8 @@ let gulp = require('gulp'),
   zip = require('gulp-zip'),
   sftp = require('gulp-sftp'),
   rename = require("gulp-rename"),
-  debug = require('gulp-debug');
+  debug = require('gulp-debug'),
+  concat = require('gulp-concat');
 
 /**
  * Normalize all paths to be plain, paths with no leading './',
@@ -39,6 +40,7 @@ function normalizePath() {
 // JS copy
 gulp.task('pl-copy:js', function () {
   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
+    .pipe(concat('script.js'))
     .pipe(gulp.dest(normalizePath(paths().public.js)));
 });
 
